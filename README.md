@@ -1,4 +1,6 @@
 # exemplar-view-list
+[![Build Status](https://travis-ci.org/frxnz/exemplar-view-list.svg?branch=master)](https://travis-ci.org/frxnz/exemplar-view-list)
+
 A helper for listing Exemplar views
 
 Usage
