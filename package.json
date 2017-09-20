@@ -1,0 +1,36 @@
+{
+  "name": "exemplar-view-list",
+  "version": "0.1.0",
+  "description": "A helper for listing Exemplar views",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test nyc ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frxnz/exemplar-view-list.git"
+  },
+  "author": "Derek Wheelden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frxnz/exemplar-view-list/issues"
+  },
+  "homepage": "https://github.com/frxnz/exemplar-view-list#readme",
+  "ava": {
+    "files": [
+      "test/**/*.js",
+      "!test/assets/**/*"
+    ]
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "cross-env": "^5.0.5",
+    "handlebars": "^4.0.10",
+    "nyc": "^11.2.1"
+  },
+  "dependencies": {
+    "fs-extra": "^4.0.2",
+    "glob": "^7.1.2",
+    "handlebars": "^4.0.10"
+  }
+}
