@@ -8,9 +8,29 @@ function helper(options) {
     if (!('path' in options.hash)) return '';
 
     const filenames = eutil.getViewsSync(options.hash.path);
-    const views = filenames.map((filename) => {
+    let views = filenames.map((filename) => {
         return eutil.fileToViewObjectSync(filename);
     });
+
+    if (options.hash.sortBy) {
+        views = views.sort((a, b) => {
+            let left;
+            let right;
+
+            if (options.hash.sortBy === 'date') {
+                left = new Date(b.data.date);
+                right = new Date(a.data.date);
+            } else {
+                left = a.data[options.hash.sortBy];
+                right = b.data[options.hash.sortBy];
+            }
+    
+            if (left < right) return -1;
+            if (left > right) return 1;
+            return 0;
+        });
+    }
+
     const output = views.map((view) => {
         view.data.url = eutil.getViewUrl(view);
         return `
