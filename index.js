@@ -7,17 +7,15 @@ const eutil = require('exemplar-util');
 function helper(options) {
     if (!('path' in options.hash)) return '';
 
-    const views = eutil.getViewsSync(options.hash.path);
-    const templates = views.map((view) => {
-        const content = fs.readFileSync(view, 'utf-8');
-        return eutil.parseView({
-            template : content,
-        });
+    const filenames = eutil.getViewsSync(options.hash.path);
+    const views = filenames.map((filename) => {
+        return eutil.fileToViewObjectSync(filename);
     });
-    const output = templates.map((template) => {
+    const output = views.map((view) => {
+        view.data.url = eutil.getViewUrl(view);
         return `
             <div class="${options.hash.className || ''}">
-                ${options.fn(template.data)}
+                ${options.fn(view.data)}
             </div>
         `;
     });

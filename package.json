@@ -1,6 +1,6 @@
 {
   "name": "exemplar-view-list",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A helper for listing Exemplar views",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,8 @@
   "ava": {
     "files": [
       "test/**/*.js",
-      "!test/assets/**/*"
+      "!test/assets/**/*",
+      "!test/common/**/*"
     ]
   },
   "devDependencies": {
@@ -29,7 +30,7 @@
     "nyc": "^11.2.1"
   },
   "dependencies": {
-    "exemplar-util": "0.0.1",
+    "exemplar-util": "0.0.5",
     "fs-extra": "^4.0.2",
     "glob": "^7.1.2",
     "handlebars": "^4.0.10"
