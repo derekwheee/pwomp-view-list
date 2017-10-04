@@ -1,7 +1,7 @@
-# exemplar-view-list
-[![Build Status](https://travis-ci.org/frxnz/exemplar-view-list.svg?branch=master)](https://travis-ci.org/frxnz/exemplar-view-list)
+# pwomp-view-list
+[![Build Status](https://travis-ci.org/frxnz/pwomp-view-list.svg?branch=master)](https://travis-ci.org/frxnz/pwomp-view-list)
 
-A helper for listing Exemplar views
+A helper for listing Pwomp views
 
 Usage
 -----

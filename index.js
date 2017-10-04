@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const glob = require('glob');
 const Handlebars = require('handlebars');
-const eutil = require('exemplar-util');
+const eutil = require('pwomp-util');
 
 function helper(options) {
     if (!('path' in options.hash)) return '';
